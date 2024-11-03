@@ -8,7 +8,7 @@ module.exports = {
         main: './src/js/script.js',
     },
     output: {
-        filename: '[name].[contenthash].bundle.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true
     },
@@ -33,7 +33,6 @@ module.exports = {
     ] },
     plugins: [
         new HtmlWebpackPlugin({ 
-            title: 'Applicazione webpack',
             template: './src/index.html'
         }),
         new CopyWebpackPlugin({
