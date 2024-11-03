@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { cache } = require('webpack');
 
 module.exports = {
     entry: {
@@ -18,7 +17,7 @@ module.exports = {
             use: ['style-loader', 'css-loader']
         },
         {
-            test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
             use: {
                 loader: 'img-optimize-loader',
                 options: {
