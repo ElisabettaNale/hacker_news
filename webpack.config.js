@@ -5,8 +5,7 @@ const { type } = require('os');
 
 module.exports = {
     entry: {
-        principale: './src/js/script.js',
-        secondario: './src/js/script2.js'
+        main: './src/js/script.js',
     },
     output: {
         filename: '[name].[contenthash].bundle.js',
