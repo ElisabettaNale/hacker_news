@@ -38,7 +38,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'src/img/favicon_orange.ico', to: 'img' }
+                { from: 'src/img', to: 'img' }
             ]
         })
     ],
