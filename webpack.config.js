@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { cache } = require('webpack');
 
 module.exports = {
     entry: {
@@ -43,7 +44,7 @@ module.exports = {
     devServer: {
         open: true,
         static: path.resolve(__dirname, 'dist'),
+        cache: false
     }
 }
 
-console.log(__dirname)
