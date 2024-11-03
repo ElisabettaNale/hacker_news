@@ -1,3 +1,7 @@
+import '../css/style.css';
+import newsSearchIcon from '../img/news-search.svg';
+import calendarIcon from '../img/calendar.svg';
+
 // Constants
 const HACKERNEWS_URL = "https://hacker-news.firebaseio.com/v0/";
 const DATE_OPTIONS = {
@@ -37,13 +41,13 @@ function createNewsElement(news) {
     let newsBox = createElement("div", "news-box");
     let newsTitle = createElement("p", "news-title", news.title);
     let newsLinkContainer = createElement("div", "news-link-container");
-    let newsLinkIcon = createElement("img", "news-link-icon", "", {"src": "img/news-search.svg"});
+    let newsLinkIcon = createElement("img", "news-link-icon", "", {"src": newsSearchIcon});
     let newsLinkShort = news.link.split("/").slice(0, 3).join("/");
     let newsLink = createElement("a", "news-link", newsLinkShort, {"href": news.link,
                                                                "target": "_blank" 
     });
     let newsDateContainer = createElement("div", "news-date-container");
-    let newsDateIcon = createElement("img", "news-date-icon", "", {"src": "img/calendar.svg"});
+    let newsDateIcon = createElement("img", "news-date-icon", "", {"src": calendarIcon});
     let newsDate = createElement("p", "news-date", news.date);
     newsLinkContainer.appendChild(newsLinkIcon);
     newsLinkContainer.appendChild(newsLink);
