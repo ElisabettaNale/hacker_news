@@ -30,8 +30,10 @@ Una semplice piattaforma web che visualizza le ultime notizie da [Hacker News](h
 ## Preview del progetto
 
 <p align="center">
-    <img src="https://github.com/ElisabettaNale/hacker_news/blob/main/img/favicon_orange.ico"
-         alt="Anteprima dell'immagine">
+    <img src="https://github.com/ElisabettaNale/hacker_news/blob/main/src/img/screenshot1.jpeg"
+         alt="Anteprima dell'immagine 1">
+    <img src="https://github.com/ElisabettaNale/hacker_news/blob/main/src/img/screenshot2.jpeg"
+         alt="Anteprima dell'immagine 2">
 </p>
 
 
