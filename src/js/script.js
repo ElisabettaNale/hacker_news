@@ -47,7 +47,7 @@ function createNewsElement(news) {
                                    "", 
                                    { src: newsSearchIcon,
                                      alt: "news search icon"}
-);
+  );
   let newsLinkShort = news.link.split("/").slice(0, 3).join("/");
   let newsLink = createElement("p", "news-link", newsLinkShort);
   let newsDateContainer = createElement("div", "news-date-container");
@@ -56,7 +56,7 @@ function createNewsElement(news) {
                                    "", 
                                    { src: calendarIcon,
                                      alt: "calendar icon"}
-);
+  );
   let newsDate = createElement("p", "news-date", news.date);
 
   newsLinkContainer.appendChild(newsLinkIcon);
@@ -174,6 +174,7 @@ function handleLoadMoreClick(event) {
     loadNews();
   }
 }
+
 
 ///////////////////////////////////////////////////////////////
 // Main
