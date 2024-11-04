@@ -25,14 +25,6 @@ function displayError(message) {
     errorElement.textContent = message;
 }
 
-//
-function applyClickEffect(button, effectClass = "button-clicked") {
-    button.classList.add(effectClass);
-    setTimeout(() => {
-      button.classList.remove(effectClass);
-    }, 100);
-  }
-
 // Function to create DOM elements
 function createElement(type, cssClass, text = "", attributes = {}) {
     let element = document.createElement(type);
@@ -55,18 +47,23 @@ function createNewsElement(news) {
     let newsDateContainer = createElement("div", "news-date-container");
     let newsDateIcon = createElement("img", "news-date-icon", "", {"src": calendarIcon});
     let newsDate = createElement("p", "news-date", news.date);
-    let newsLearnMoreContainer = createElement("div", "news-learnmore-container");
-    let newsLearnMoreButton = createElement("a", "news-learnmore-button", "Learn more", {"href": news.link,
-        "target": "_blank"});
+    
     newsLinkContainer.appendChild(newsLinkIcon);
     newsLinkContainer.appendChild(newsLink);
     newsDateContainer.appendChild(newsDateIcon);
     newsDateContainer.appendChild(newsDate);
-    newsLearnMoreContainer.appendChild(newsLearnMoreButton);
     newsBox.appendChild(newsTitle);
     newsBox.appendChild(newsLinkContainer);
     newsBox.appendChild(newsDateContainer);
-    newsBox.appendChild(newsLearnMoreContainer);
+   
+    if (news.link !== "Not available") {
+        let newsLearnMoreContainer = createElement("div", "news-learnmore-container");
+        let newsLearnMoreButton = createElement("a", "news-learnmore-button", "Learn more", {"href": news.link,
+            "target": "_blank"});
+            newsLearnMoreContainer.appendChild(newsLearnMoreButton);
+            newsBox.appendChild(newsLearnMoreContainer);
+    }
+    
     return newsBox;
 }
 
