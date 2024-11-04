@@ -4,6 +4,8 @@
   <ol>
     <li><a href="#il-progetto">Il progetto: HackerNews Platform</a></li>
     <li><a href="#funzionalita">Funzionalità</a></li>
+    <li><a href="#preview">Preview</a></li>
+    <li><a href="#ink">Link</a></li>
     <li><a href="#utilizzo">Utilizzo</a></li>
     <li><a href="#contribuire">Contribuire</a></li>
     <li><a href="#contatti">Contatti</a></li>
@@ -27,6 +29,7 @@ Una semplice piattaforma web che visualizza le ultime notizie da [Hacker News](h
 - **Interfaccia Intuitiva**: Ogni notizia include titolo, link e data di pubblicazione. La data è formattata per l'ora centrale europea (CET).
 
 
+<!-- PREVIEW -->
 ## Preview del progetto
 
 <p align="center">
@@ -37,6 +40,12 @@ Una semplice piattaforma web che visualizza le ultime notizie da [Hacker News](h
          alt="Anteprima dell'immagine 2"
          height=500px>
 </p>
+
+
+<!-- LINK -->
+## Link al sito 
+
+**Clicca qui:** (https://advancedjavascript-hackernews.netlify.app/)
 
 
 <!-- UTILIZZO -->
