@@ -31,7 +31,8 @@ Una semplice piattaforma web che visualizza le ultime notizie da [Hacker News](h
 
 <p align="center">
     <img src="https://github.com/ElisabettaNale/hacker_news/blob/main/src/img/screenshot1.jpeg"
-         alt="Anteprima dell'immagine 1">
+         alt="Anteprima dell'immagine 1"
+         height=300px>
     <img src="https://github.com/ElisabettaNale/hacker_news/blob/main/src/img/screenshot2.jpeg"
          alt="Anteprima dell'immagine 2">
 </p>
