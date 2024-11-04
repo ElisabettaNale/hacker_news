@@ -173,6 +173,10 @@ footer {
         font-size: 14px;
     } 
 
+    .news-learnmore-button {
+        font-size: 16px;
+    }
+
 }
 
 @media(min-width: 800px) {
@@ -188,5 +192,9 @@ footer {
     .news-date {
         font-size: 18px;
     } 
+
+    .news-learnmore-button {
+        font-size: 20px;
+    }
 
 }
