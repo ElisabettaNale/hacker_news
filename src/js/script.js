@@ -25,6 +25,14 @@ function displayError(message) {
     errorElement.textContent = message;
 }
 
+//
+function applyClickEffect(button, effectClass = "button-clicked") {
+    button.classList.add(effectClass);
+    setTimeout(() => {
+      button.classList.remove(effectClass);
+    }, 100);
+  }
+
 // Function to create DOM elements
 function createElement(type, cssClass, text = "", attributes = {}) {
     let element = document.createElement(type);
@@ -43,19 +51,22 @@ function createNewsElement(news) {
     let newsLinkContainer = createElement("div", "news-link-container");
     let newsLinkIcon = createElement("img", "news-link-icon", "", {"src": newsSearchIcon});
     let newsLinkShort = news.link.split("/").slice(0, 3).join("/");
-    let newsLink = createElement("a", "news-link", newsLinkShort, {"href": news.link,
-                                                               "target": "_blank" 
-    });
+    let newsLink = createElement("p", "news-link", newsLinkShort);
     let newsDateContainer = createElement("div", "news-date-container");
     let newsDateIcon = createElement("img", "news-date-icon", "", {"src": calendarIcon});
     let newsDate = createElement("p", "news-date", news.date);
+    let newsLearnMoreContainer = createElement("div", "news-learnmore-container");
+    let newsLearnMoreButton = createElement("a", "news-learnmore-button", "Learn more", {"href": news.link,
+        "target": "_blank"});
     newsLinkContainer.appendChild(newsLinkIcon);
     newsLinkContainer.appendChild(newsLink);
     newsDateContainer.appendChild(newsDateIcon);
     newsDateContainer.appendChild(newsDate);
+    newsLearnMoreContainer.appendChild(newsLearnMoreButton);
     newsBox.appendChild(newsTitle);
     newsBox.appendChild(newsLinkContainer);
     newsBox.appendChild(newsDateContainer);
+    newsBox.appendChild(newsLearnMoreContainer);
     return newsBox;
 }
 
@@ -100,10 +111,6 @@ function updateLastUpdateTime() {
 
 // Function to load news on the board
 async function loadNews() {
-
-    if (currentIndex != 0) {
-        loadMoreButton.classList.add('load-more-button-hover');
-    }
     
     try {
         let newsIds = await fetchHackerNewsIds();
@@ -121,13 +128,32 @@ async function loadNews() {
         } else {
             setTimeout(() => {
                 loadMoreButton.style.display = 'block';
-                loadMoreButton.classList.remove('load-more-button-hover');
+                loadMoreButton.classList.remove('button-clicked');
             }, 300 * newsArray.length);    
         }
 
     } catch (error) {
         console.error("Error: ", error);
         displayError("Failed to load news.");
+    }
+}
+
+// Funzione per gestire i clic sui link delle notizie
+function handleLearnMoreClick(event) {
+    if (event.target.classList.contains('news-learnmore-button')) {
+        event.preventDefault(); // Prevenire il comportamento predefinito
+        event.target.classList.add('button-clicked');
+        const url = event.target.getAttribute('href');
+        setTimeout(() => {
+            window.open(url, '_blank');
+        }, 300);
+    }
+}
+
+function handleLoadMoreClick(event) {
+    if (event.target.classList.contains('load-more-button')) {
+        event.target.classList.add('button-clicked');
+        loadNews();
     }
 }
 
@@ -140,4 +166,6 @@ const loadIncrement = 10;
 let hackerNewsBoard = document.querySelector('.news-container');
 let loadMoreButton = document.querySelector('.load-more-button');
 loadNews();
-loadMoreButton.addEventListener("click", loadNews);
+loadMoreButton.addEventListener("click", handleLoadMoreClick);
+hackerNewsBoard.addEventListener("click", handleLearnMoreClick);
+

@@ -90,13 +90,10 @@ body {
     white-space: normal;
 }
 
-.news-link:hover {
-    color: #eb4001;
-}
-
 .news-date-container {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .news-date-icon {
@@ -107,6 +104,20 @@ body {
 .news-date {
     color: #576688;
     font-size: 14px;
+}
+
+.news-learnmore-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.news-learnmore-button {
+    padding: 5px;
+    color: #282f6d;
+    border: #576688 1px solid;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .load-more-button {
@@ -120,11 +131,10 @@ body {
     border: #576688 1px solid;
     border-radius: 5px;
     font-size: 18px;
-    font-weight: bold;
     display: none;
 }
 
-.load-more-button-hover {
+.button-clicked {
     color: #eb4001;
     border: #eb4001 1px solid;
 }
@@ -141,7 +151,7 @@ footer {
     justify-content: center;
     background-color: #e1e3fa;
     color: #282f6d;
-    font-size: 14px;
+    font-size: 18px;
     font-style: italic;
 }
 
