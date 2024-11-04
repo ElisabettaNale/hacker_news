@@ -45,7 +45,7 @@ Una semplice piattaforma web che visualizza le ultime notizie da [Hacker News](h
 <!-- LINK -->
 ## Link al sito 
 
-**Clicca qui:** (https://advancedjavascript-hackernews.netlify.app/)
+**Clicca qui:** https://advancedjavascript-hackernews.netlify.app/
 
 
 <!-- UTILIZZO -->
@@ -77,4 +77,4 @@ Se desideri contribuire al progetto, segui questi passaggi:
 Per qualsiasi domanda o suggerimenti, puoi contattarmi tramite:
 
 - **Sito web professionale:** [Sezione contatti](https://elisabettanale.github.io/pages/contacts.html)
-- **Profilo LinkedIn:** [Elisabetta Nale] (https://www.linkedin.com/in/elisabetta-nale/)
+- **Profilo LinkedIn:** [Elisabetta Nale](https://www.linkedin.com/in/elisabetta-nale/)
