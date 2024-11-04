@@ -46,7 +46,7 @@ module.exports = {
     devServer: {
         open: true,
         static: path.resolve(__dirname, 'dist'),
-        cache: false
+        //cache: false
     }
 }
 

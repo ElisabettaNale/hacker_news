@@ -94,7 +94,7 @@ async function fetchNewsById(id) {
 // Function to update the last update time
 function updateLastUpdateTime() {
     let lastUpdateTime = document.querySelector(".last-update-time");
-    lastUpdateTime.textContent = `Last update: ${new Date().toLocaleString('en-GB', DATE_OPTIONS)} (CET)`;
+    lastUpdateTime.textContent = `Last update: \n${new Date().toLocaleString('en-GB', DATE_OPTIONS)} (CET)`;
     lastUpdateTime.style.display = 'block';
 }
 
