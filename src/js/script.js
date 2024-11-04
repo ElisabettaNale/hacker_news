@@ -45,7 +45,8 @@ function createNewsElement(news) {
   let newsLinkIcon = createElement("img", 
                                    "news-link-icon", 
                                    "", 
-                                   { src: newsSearchIcon }
+                                   { src: newsSearchIcon,
+                                     alt: "news search icon"}
 );
   let newsLinkShort = news.link.split("/").slice(0, 3).join("/");
   let newsLink = createElement("p", "news-link", newsLinkShort);
@@ -53,7 +54,8 @@ function createNewsElement(news) {
   let newsDateIcon = createElement("img", 
                                    "news-date-icon", 
                                    "", 
-                                   { src: calendarIcon }
+                                   { src: calendarIcon,
+                                     alt: "calendar icon"}
 );
   let newsDate = createElement("p", "news-date", news.date);
 
