@@ -146,6 +146,7 @@ function handleLearnMoreClick(event) {
         const url = event.target.getAttribute('href');
         setTimeout(() => {
             window.open(url, '_blank');
+            event.target.classList.remove('button-clicked');
         }, 300);
     }
 }
