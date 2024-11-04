@@ -100,6 +100,10 @@ function updateLastUpdateTime() {
 
 // Function to load news on the board
 async function loadNews() {
+
+    if (currentIndex != 0) {
+        loadMoreButton.classList.add('load-more-button-hover');
+    }
     
     try {
         let newsIds = await fetchHackerNewsIds();
@@ -117,6 +121,7 @@ async function loadNews() {
         } else {
             setTimeout(() => {
                 loadMoreButton.style.display = 'block';
+                loadMoreButton.classList.remove('load-more-button-hover');
             }, 300 * newsArray.length);    
         }
 

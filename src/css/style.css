@@ -119,11 +119,12 @@ body {
     color: #282f6d;
     border: #576688 1px solid;
     border-radius: 5px;
+    font-size: 18px;
     font-weight: bold;
     display: none;
 }
 
-.load-more-button:hover {
+.load-more-button-hover {
     color: #eb4001;
     border: #eb4001 1px solid;
 }
@@ -140,7 +141,7 @@ footer {
     justify-content: center;
     background-color: #e1e3fa;
     color: #282f6d;
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
 }
 
